@@ -1,15 +1,17 @@
 package br.com.dio;
 
+import java.util.ArrayList;
+
 public abstract class Conta implements IConta{
 
     private static final int AGENCIA_PADRAO = 1;
     private static int SEQUENCIAL = 1;
 
+
     protected int agencia;
     protected int numeroConta;
     protected double saldo;
     protected Cliente cliente;
-
 
 
     public Conta(Cliente cliente){

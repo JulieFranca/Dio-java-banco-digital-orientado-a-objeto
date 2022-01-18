@@ -3,14 +3,21 @@ package br.com.dio;
 public class Main {
     public static void main(String[] args) {
 
-        Cliente cliente = new Cliente();
-        cliente.setNome("Juliano");
+        Cliente juliano = new Cliente();
 
-        Conta cc = new ContaCorrente(cliente);
+        juliano.setNome("JULIANO");
+
+        Cliente carla = new Cliente();
+        carla.setNome("CARLA");
+
+        Conta cc = new ContaCorrente(juliano);
+
+        Conta cp = new ContaPoupanca(carla);
+
+
 
         cc.depositar(200);
 
-        Conta cp = new ContaPoupanca(cliente);
 
         cc.trasferir(50,cp);
 
